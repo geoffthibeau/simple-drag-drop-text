@@ -24,7 +24,8 @@ class SimpleDragDropText
       @lines = atom.views.getView(@editor).shadowRoot.querySelector '.lines'
       @linesSubs = new SubAtom
       @linesSubs.add @lines, 'mousedown', (e) => @mousedown e
-      @linesSubs.add @lines, 'mousemove', (e) => if @mouseIsDown then @drag() else @clear()
+      @linesSubs.add @lines, 'mousemove', (e) => 
+        if @mouseIsDown and e.which > 0 then @drag() else @clear()
         
   mousedown: (e) ->
     if not @editor then @clear(); return
