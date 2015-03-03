@@ -1,3 +1,7 @@
+### 0.2.2 - 3/2/15
+
+- Check select rectangle on mousedown
+
 ### 0.2.1 - 3/2/15
 
 - Check mousebuttons while dragging

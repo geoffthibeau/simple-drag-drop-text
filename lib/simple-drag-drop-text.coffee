@@ -34,6 +34,15 @@ class SimpleDragDropText
     @selBufferRange = @selMarker.getBufferRange()
     if @selBufferRange.isEmpty() then return
     
+    inSelection = no
+    $(@lines).find('.highlights .highlight.selection .region').each (__, ele) =>
+      {left, top, right, bottom} = ele.getBoundingClientRect()
+      if left <= e.pageX < right and
+          top <= e.pageY < bottom
+        inSelection = yes
+        return false
+    if not inSelection then return
+
     @text = @editor.getTextInBufferRange @selBufferRange
     @marker = @editor.markBufferRange @selBufferRange, @selMarker.getProperties()
     @editor.decorateMarker @marker, type: 'highlight', class: 'selection'
