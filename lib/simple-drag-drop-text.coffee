@@ -56,7 +56,7 @@ class SimpleDragDropText
   
   drop: (altKey) ->
     if not altKey then @editor.setTextInBufferRange @selBufferRange, ''
-    cursorPos = @editor.getLastSelection().marker.bufferMarker.range.start
+    cursorPos = @editor.getLastSelection().marker.getBufferRange().start
     @editor.setTextInBufferRange [cursorPos, cursorPos], @text
     
   clear: (altKey) ->

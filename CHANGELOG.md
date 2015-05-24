@@ -1,3 +1,6 @@
+### 0.2.3 - 4/2/15
+- Fixed exception on drop
+
 ### 0.2.2 - 3/2/15
 
 - Check select rectangle on mousedown
