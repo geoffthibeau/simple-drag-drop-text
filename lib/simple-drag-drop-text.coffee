@@ -7,10 +7,17 @@ $ = require 'jquery'
 SubAtom = require 'sub-atom'
 
 class SimpleDragDropText
+  config:
+    copyKey:
+      type: 'string'
+      default: 'alt'
+      description: 'Select key for copy action'
+      enum: ['alt', 'ctrl', 'meta']
+
   activate: ->
     @subs = new SubAtom
       
-    @subs.add 'body', 'mouseup', (e) => if @mouseIsDown then @clear e.altKey
+    @subs.add 'body', 'mouseup', (e) => if @mouseIsDown then @clear e[atom.config.get('simple-drag-drop-text.copyKey')+'Key']
     @subs.add atom.workspace.observeTextEditors        (editor) => @setEditor()
     @subs.add atom.workspace.onDidChangeActivePaneItem (editor) => @setEditor()
   
