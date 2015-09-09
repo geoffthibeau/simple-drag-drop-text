@@ -62,9 +62,11 @@ class SimpleDragDropText
     process.nextTick -> selection.clear()
   
   drop: (altKey) ->
+    checkpointBefore = @editor.createCheckpoint()
     if not altKey then @editor.setTextInBufferRange @selBufferRange, ''
     cursorPos = @editor.getLastSelection().marker.getBufferRange().start
     @editor.setTextInBufferRange [cursorPos, cursorPos], @text
+    @editor.groupChangesSinceCheckpoint checkpointBefore
     
   clear: (altKey) ->
     if altKey? and @isDragging then @drop altKey
