@@ -10,7 +10,7 @@ Drag and drop to move text using the mouse.  This mimics the standard behavior o
 
 ### Installation
 
-Enter `atom install simple-drag-drop-text` or use the settings page.
+Enter `apm install simple-drag-drop-text` or use the settings page.
 
 ---
 
