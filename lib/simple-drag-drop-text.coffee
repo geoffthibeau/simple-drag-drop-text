@@ -29,10 +29,7 @@ class SimpleDragDropText
 
       @linesSubs?.dispose()
       @lines = atom.views.getView(@editor)
-      if @lines.shadowRoot
-        @lines = @lines.shadowRoot.querySelector '.lines'
-      else
-        @lines = @lines.querySelector '.lines'
+      @lines = @lines.querySelector '.lines'
       @linesSubs = new SubAtom
       @linesSubs.add @lines, 'mousedown', (e) => @mousedown e
       @linesSubs.add @lines, 'mousemove', (e) =>
