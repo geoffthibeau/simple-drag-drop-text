@@ -1,3 +1,11 @@
+### 0.3.4 - 2/9/17
+- Changes default modifier key to `CTRL`
+- Updates README and Settings wording for clarity
+
+### 0.3.3 - 2/9/17
+- Updates installation instructions
+- Updates repository URI
+
 ### 0.3.2 - 2/9/17
 - Removes shadowRoot reference
 
