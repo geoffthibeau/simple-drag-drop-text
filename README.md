@@ -22,17 +22,10 @@ Drag/drop is triggered by clicking and dragging a text selection from one place 
 
 ### Alternative Package
 
-There is a sister package to this one, `drag-drop-text`.  It offers more features but it has a small learning curve and does not follow the standard behavior of other editors.  This is for true mouse-loving geeks (like me).
-
-Drag-drop-text package features ...
-
-- No need for any modifier key like `ALT` for any operation.  Everything is done with the left mouse button.
-- You can do the standard cut (`ctrl-x`), copy (`ctrl-c`), and paste (`ctrl-v`) operations using only the mouse.
-- Text that has been dragged is left in the clipboard.  So you can drag and then paste the same text again.
+There is a sister package to this one, `drag-drop-text`. It is more complex but it has a small learning curve and does not follow the standard behavior of other editors.
 
 ---
 
 ### License
 
-Copyright Mark Hahn using the MIT license
-Maintained by Geoff Thibeau since 2017-02-08
+Copyright Mark Hahn using the MIT license. Maintained by Geoff Thibeau since 2017-02-08.
