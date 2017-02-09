@@ -10,7 +10,7 @@ class SimpleDragDropText
   config:
     copyKey:
       type: 'string'
-      default: 'alt'
+      default: 'ctrl'
       description: 'Select key for copy action'
       enum: ['alt', 'ctrl', 'meta']
 
