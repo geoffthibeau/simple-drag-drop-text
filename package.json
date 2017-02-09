@@ -3,7 +3,7 @@
   "main": "./lib/simple-drag-drop-text",
   "version": "0.3.2",
   "description": "Adds basic drag and drop text feature to Atom editor.",
-  "repository": "https://github.com/mark-hahn/simple-drag-drop-text",
+  "repository": "https://github.com/geoffthibeau/simple-drag-drop-text",
   "license": "MIT",
   "engines": {
     "atom": ">0.170.0"
