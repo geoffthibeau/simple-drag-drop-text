@@ -11,7 +11,7 @@ class SimpleDragDropText
     copyKey:
       type: 'string'
       default: 'ctrl'
-      description: 'Select key for copy action'
+      description: 'Select modifier key for copy action'
       enum: ['alt', 'ctrl', 'meta']
 
   activate: ->
