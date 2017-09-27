@@ -1,3 +1,6 @@
+### 0.3.6 - 9/27/17
+- Adds missing renamed variable for 0.3.5
+
 ### 0.3.5 - 9/27/17
 - Fixes breaking change from Atom core in 1.21.0-beta
 - Maintains fallback for Atom pre-1.21.0 releases
