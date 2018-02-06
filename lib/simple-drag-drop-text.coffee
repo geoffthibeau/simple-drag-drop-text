@@ -3,7 +3,6 @@
   lib/simple-drag-drop-text.coffee
 ###
 
-$ = require 'jquery'
 SubAtom = require 'sub-atom'
 
 class SimpleDragDropText
@@ -44,10 +43,9 @@ class SimpleDragDropText
 
     inSelection = no
 
-    @highlights = $(@lines).find('.highlights')
-    @highlights = if 0 == @highlights.length then @views.querySelector '.highlights' else @highlights
+    @highlights = @views.querySelector '.highlights'
 
-    $(@highlights).find('.highlight.selection .region').each (__, ele) =>
+    @highlights.querySelectorAll('.highlight.selection .region').forEach (ele) =>
       {left, top, right, bottom} = ele.getBoundingClientRect()
       if left <= e.pageX < right and
           top <= e.pageY < bottom

@@ -1,3 +1,6 @@
+### 0.4.0 - 2/6/18
+- Removes jQuery dependency
+
 ### 0.3.6 - 9/27/17
 - Adds missing renamed variable for 0.3.5
 
