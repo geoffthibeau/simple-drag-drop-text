@@ -1,3 +1,8 @@
+### 0.5.0 - 7/23/19
+- Adds support for triple-click selection
+- Adds support for modifying the delay before enabling drag
+- Updates README
+
 ### 0.4.0 - 2/6/18
 - Removes jQuery dependency
 

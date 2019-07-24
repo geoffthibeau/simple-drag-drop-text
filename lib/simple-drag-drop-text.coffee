@@ -12,9 +12,15 @@ class SimpleDragDropText
       default: 'ctrl'
       description: 'Select modifier key for copy action'
       enum: ['alt', 'ctrl', 'meta']
+    delay:
+      type: 'integer'
+      default: 500
+      minimum: 1
+      description: 'Hold click for this duration to enable drag'
 
   activate: ->
     @subs = new SubAtom
+    @canDrag = no
 
     @subs.add 'body', 'mouseup', (e) => if @mouseIsDown then @clear e[atom.config.get('simple-drag-drop-text.copyKey')+'Key']
     @subs.add atom.workspace.observeTextEditors        (editor) => @setEditor()
@@ -26,13 +32,14 @@ class SimpleDragDropText
         @clear()
         return
 
+      @userDelay = atom.config.get('simple-drag-drop-text.delay') or 500
       @linesSubs?.dispose()
       @views = atom.views.getView(@editor)
       @lines = @views.querySelector '.lines'
       @linesSubs = new SubAtom
       @linesSubs.add @lines, 'mousedown', (e) => @mousedown e
       @linesSubs.add @lines, 'mousemove', (e) =>
-        if @mouseIsDown and e.which > 0 then @drag() else @clear()
+        if @mouseIsDown and @canDrag and e.which > 0 then @drag() else @clear()
 
   mousedown: (e) ->
     if not @editor then @clear(); return
@@ -58,6 +65,7 @@ class SimpleDragDropText
     @editor.decorateMarker @marker, type: 'highlight', class: 'selection'
 
     @mouseIsDown = yes
+    setTimeout((=> @canDrag = yes), @userDelay)
 
   drag: ->
     @isDragging = yes
@@ -73,7 +81,7 @@ class SimpleDragDropText
 
   clear: (altKey) ->
     if altKey? and @isDragging then @drop altKey
-    @mouseIsDown = @isDragging = no
+    @mouseIsDown = @isDragging = @canDrag = no
     @marker?.destroy()
 
   deactivate: ->

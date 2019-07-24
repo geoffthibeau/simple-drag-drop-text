@@ -1,6 +1,6 @@
 # simple-drag-drop-text package for the Atom editor
 
-Drag and drop to move text using the mouse. This mimics the standard behavior of many other editors.  Dragging and dropping with the modifier key held will copy the text instead of moving it. You may change the modifier key in the Settings; options are `CTRL`, `ALT`, and `META` (super/Windows/command).
+Drag and drop to move text using the mouse. This mimics the standard behavior of many other editors. Dragging and dropping with the modifier key held will copy the text instead of moving it. You may change the modifier key in the Settings; options are `CTRL`, `ALT`, and `META` (super/Windows/command).
 
 ---
 
@@ -19,6 +19,8 @@ Enter `apm install simple-drag-drop-text` or use the settings page.
 There is no Atom command.  
 
 Drag/drop is triggered by clicking and dragging a text selection from one place to another. If the modifier key is held when the mouse is released then the text will be copied instead of moved. The default modifier key is `CTRL` but you may change this in the Settings to either `ALT` or `META` (super/Windows/command).
+
+The drag action is delayed by 500ms by default. The delay is adjustable within the Settings.
 
 ### Alternative Package
 
