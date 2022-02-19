@@ -1,0 +1,7 @@
+atom-text-editor.simple-drag-drop-text--isDragging {
+  cursor: default !important;
+}
+
+atom-text-editor.simple-drag-drop-text--isDraggingAndCopying {
+  cursor: copy !important;
+}
