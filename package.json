@@ -6,6 +6,6 @@
   "repository": "https://github.com/geoffthibeau/simple-drag-drop-text",
   "license": "MIT",
   "engines": {
-    "atom": ">0.170.0"
+    "atom": ">=1.59.0"
   }
 }
