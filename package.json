@@ -7,8 +7,5 @@
   "license": "MIT",
   "engines": {
     "atom": ">0.170.0"
-  },
-  "dependencies": {
-    "sub-atom": "^1.0.0"
   }
 }
