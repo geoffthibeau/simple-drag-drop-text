@@ -1,3 +1,7 @@
+### 0.6.1 - 2/20/22
+
+- Fixes bug when reading `classList` from `undefined` (e.g., `this.getView()`)
+
 ### 0.6.0 - 2/19/22
 
 - Adds cursor state during drag and copy
